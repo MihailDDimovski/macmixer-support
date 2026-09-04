@@ -1,0 +1,53 @@
+name: MacMixer support request
+description: Report an audio, interface, or compatibility problem.
+title: "[Support]: "
+labels: [support]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping us improve MacMixer. Please do not include private information or recordings.
+  - type: input
+    id: mac
+    attributes:
+      label: Mac model
+      placeholder: MacBook Pro 14-inch, Apple M3 Pro
+    validations:
+      required: true
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: macOS 15.6
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: MacMixer version
+      placeholder: 1.0
+    validations:
+      required: true
+  - type: input
+    id: output
+    attributes:
+      label: Output device
+      placeholder: MacBook Pro Speakers, AirPods, USB interface, or HDMI
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Tell us what you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open ...
+        2. Play ...
+        3. Change ...
+    validations:
+      required: true

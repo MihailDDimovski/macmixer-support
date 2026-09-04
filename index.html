@@ -14,6 +14,8 @@
       <span>MacMixer</span>
     </a>
     <nav aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#setup">Setup</a>
       <a href="#help">Help</a>
       <a href="privacy.html">Privacy</a>
     </nav>
@@ -25,6 +27,52 @@
       <h1>Your Mac, perfectly mixed.</h1>
       <p class="lead">Control, mute, and balance each app independently from one simple mixer.</p>
       <a class="button" href="#help">Get support</a>
+    </section>
+
+    <section class="feature-section" id="features">
+      <div class="section-heading">
+        <span class="section-label">Designed for everyday audio</span>
+        <h2>One place for every app.</h2>
+        <p>MacMixer gives each compatible audio application its own controls without changing the controls inside the app.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="feature-icon blue" aria-hidden="true">⌁</span>
+          <h3>Per-app volume</h3>
+          <p>Turn Chrome down, keep a meeting clear, or balance music with everything else.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon violet" aria-hidden="true">◖</span>
+          <h3>Instant mute</h3>
+          <p>Mute an individual application or silence everything with a single action.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon cyan" aria-hidden="true">⌕</span>
+          <h3>Find apps quickly</h3>
+          <p>Search and filter open applications when your workspace gets busy.</p>
+        </article>
+        <article class="feature-card">
+          <span class="feature-icon green" aria-hidden="true">✓</span>
+          <h3>Private by design</h3>
+          <p>Audio processing happens locally. MacMixer does not record or transmit your audio.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="setup" id="setup">
+      <div class="section-heading compact">
+        <span class="section-label">Getting started</span>
+        <h2>Ready in three steps.</h2>
+      </div>
+      <ol class="steps">
+        <li><strong>Open MacMixer</strong><span>Launch it from Applications. The speaker control appears in the menu bar.</span></li>
+        <li><strong>Allow audio access</strong><span>Approve the macOS audio-capture prompt so MacMixer can process app audio locally.</span></li>
+        <li><strong>Build your mix</strong><span>Play audio, select the output device, then adjust or mute each application.</span></li>
+      </ol>
+      <div class="requirements">
+        <span><strong>Requires</strong> macOS 14.2 or later</span>
+        <span><strong>Works with</strong> built-in, Bluetooth, USB, and HDMI audio devices</span>
+      </div>
     </section>
 
     <section class="panel" id="help">
@@ -49,14 +97,39 @@
           <summary>Bluetooth or USB output changed</summary>
           <p>Select the new device under Output Device. If it does not appear, reconnect it and reopen MacMixer.</p>
         </details>
+        <details>
+          <summary>The menu-bar icon is missing</summary>
+          <p>MacMixer uses a compact speaker icon. If the menu bar is full, close an unused menu-bar app or reduce the space occupied by other items, then reopen MacMixer.</p>
+        </details>
+        <details>
+          <summary>How do I reset the mix?</summary>
+          <p>Use Reset to align individual application levels with the master level and clear temporary mute choices.</p>
+        </details>
+        <details>
+          <summary>Does MacMixer record my audio?</summary>
+          <p>No. Audio is processed in real time on your Mac and is not recorded, retained, or transmitted. See the <a href="privacy.html">Privacy Policy</a>.</p>
+        </details>
       </div>
+    </section>
+
+    <section class="diagnostics">
+      <div>
+        <span class="section-label">Before reporting a problem</span>
+        <h2>A few details help us solve it faster.</h2>
+      </div>
+      <ul class="checklist">
+        <li>Your Mac model and macOS version</li>
+        <li>The affected application and MacMixer version</li>
+        <li>Your selected output device</li>
+        <li>Clear steps that reproduce the problem</li>
+      </ul>
     </section>
 
     <section class="contact">
       <div>
         <span class="section-label">Still need help?</span>
         <h2>Tell us what happened.</h2>
-        <p>Include your macOS version, output device, affected app, and the steps that reproduce the issue. Do not include passwords or private information.</p>
+        <p>Support is handled through public GitHub issues. Never include passwords, recordings, account details, or other private information.</p>
       </div>
       <a class="button secondary" href="https://github.com/MihailDDimovski/macmixer-support/issues/new" rel="noopener">Report an issue</a>
     </section>
