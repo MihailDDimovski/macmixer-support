@@ -1,0 +1,90 @@
+:root {
+  color-scheme: dark;
+  --bg: #090c14;
+  --surface: rgba(22, 29, 48, .76);
+  --line: rgba(167, 189, 255, .16);
+  --text: #f7f9ff;
+  --muted: #a9b4cb;
+  --blue: #32a5ff;
+  --cyan: #25e3f2;
+  --violet: #8d65ff;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 18% 8%, rgba(44, 112, 255, .2), transparent 34rem),
+    radial-gradient(circle at 84% 42%, rgba(139, 65, 255, .13), transparent 30rem),
+    var(--bg);
+  font: 16px/1.65 -apple-system, BlinkMacSystemFont, "SF Pro Text", Inter, sans-serif;
+}
+
+a { color: #79c9ff; text-decoration: none; }
+a:hover { color: white; }
+.nav, main, footer { width: min(1080px, calc(100% - 40px)); margin-inline: auto; }
+.nav {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.nav nav { display: flex; gap: 24px; }
+.brand { display: flex; align-items: center; gap: 12px; color: white; font-size: 19px; font-weight: 750; }
+.mark {
+  width: 38px; height: 38px; border-radius: 11px; display: flex; gap: 5px;
+  align-items: center; justify-content: center;
+  background: linear-gradient(145deg, var(--blue), var(--violet));
+  box-shadow: 0 10px 34px rgba(64, 125, 255, .28);
+}
+.mark i { width: 3px; height: 21px; border-radius: 3px; background: white; position: relative; }
+.mark i::after { content: ""; position: absolute; width: 7px; height: 7px; border-radius: 50%; background: white; left: -2px; }
+.mark i:nth-child(1)::after { top: 3px; }
+.mark i:nth-child(2)::after { top: 11px; }
+.mark i:nth-child(3)::after { top: 6px; }
+
+.hero { padding: 112px 0 96px; max-width: 790px; }
+.eyebrow, .section-label { color: var(--cyan); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; font-size: 13px; }
+h1 { font-size: clamp(48px, 8vw, 84px); line-height: .98; letter-spacing: -.055em; margin: 20px 0 28px; }
+h2 { font-size: clamp(28px, 4vw, 42px); line-height: 1.1; letter-spacing: -.035em; margin: 10px 0 18px; }
+.lead { color: var(--muted); font-size: clamp(19px, 3vw, 25px); max-width: 700px; }
+.button {
+  display: inline-flex; align-items: center; justify-content: center; margin-top: 22px;
+  min-height: 48px; padding: 0 22px; border-radius: 14px; color: #06111c; font-weight: 750;
+  background: linear-gradient(110deg, var(--cyan), var(--blue)); box-shadow: 0 12px 35px rgba(48, 163, 255, .22);
+}
+.button:hover { color: #06111c; transform: translateY(-1px); }
+.button.secondary { color: white; background: rgba(255,255,255,.09); border: 1px solid var(--line); box-shadow: none; white-space: nowrap; }
+.button.secondary:hover { color: white; background: rgba(255,255,255,.14); }
+
+.panel, .contact, .legal section {
+  border: 1px solid var(--line); border-radius: 24px; background: var(--surface);
+  box-shadow: 0 24px 70px rgba(0,0,0,.2); backdrop-filter: blur(18px);
+}
+.panel { padding: clamp(26px, 5vw, 52px); }
+.faq { margin-top: 34px; }
+details { border-top: 1px solid var(--line); padding: 19px 0; }
+details:last-child { border-bottom: 1px solid var(--line); }
+summary { cursor: pointer; font-size: 18px; font-weight: 680; }
+details p { color: var(--muted); margin: 10px 28px 2px 0; }
+.contact { margin: 28px 0 100px; padding: clamp(26px, 5vw, 48px); display: flex; align-items: center; justify-content: space-between; gap: 36px; }
+.contact p { color: var(--muted); max-width: 700px; margin: 0; }
+
+.legal { max-width: 900px; padding: 86px 0; }
+.legal h1 { font-size: clamp(44px, 7vw, 70px); }
+.legal > .lead { margin-bottom: 50px; }
+.legal section { padding: 28px 32px; margin: 16px 0; }
+.legal section h2 { font-size: 24px; margin: 0 0 8px; }
+.legal section p { color: var(--muted); margin: 0; }
+footer { min-height: 90px; padding: 25px 0; display: flex; justify-content: space-between; gap: 20px; color: var(--muted); border-top: 1px solid var(--line); }
+
+@media (max-width: 650px) {
+  .nav nav { gap: 14px; }
+  .hero { padding: 76px 0 66px; }
+  .contact { align-items: flex-start; flex-direction: column; }
+  footer { flex-direction: column; }
+}
